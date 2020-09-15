@@ -1,16 +1,18 @@
 # LDP
-Source code for "Learning Deep Priors for Image Dehazing", ICCV 2019
+Source code for "Learning Deep Priors for Image Dehazing", ICCV 2019  
+#### [Paper](https://openaccess.thecvf.com/content_ICCV_2019/papers/Liu_Learning_Deep_Priors_for_Image_Dehazing_ICCV_2019_paper.pdf) | [Project Page](https://lewisyangliu.github.io/projects/LDP)
 
-Dependencies:  
+## Dependencies:  
 Python = 3.6  
 PyTorch = 0.4.1  
-torchvision == 0.2.0
+torchvision = 0.2.0
 
-Command line for training and test:  
+## Command line for training and test:  
 Please see ./code/demo.sh
 
-Datasets for training and test:  
-1). Traning:  
+## Datasets for training and test:  
+#### 1). Traning:  
+```
 |--dataset  
     |--train  
         |--haze  
@@ -46,7 +48,9 @@ Datasets for training and test:
             |--1.png  
             |--2.png  
                 ：  
-2). Test:  
+```
+#### 2). Test:  
+```
 |--dataset  
     |--train  
         |--haze  
@@ -57,11 +61,13 @@ Datasets for training and test:
             |--1.png  
             |--2.png  
                 ： 
+```
 
-Code for computing PSNR and SSIM:  
+## Code for computing PSNR and SSIM:  
 Please see ./cal_psnr_ssim
 
-Citation:  
+## Citation:  
+```
 @InProceedings{Liu_2019_ICCV,  
           author = {Liu, Yang and Pan, Jinshan and Ren, Jimmy and Su, Zhixun},  
           title = {Learning Deep Priors for Image Dehazing},  
@@ -69,3 +75,4 @@ Citation:
           month = {October},  
           year = {2019}  
           }
+```
