@@ -1,0 +1,8 @@
+### traing
+CUDA_VISIBLE_DEVICES=0 python -u main.py --dir_data /data/liuyang/2019-dehaze/dataset/dehaze-data_v4 --data_test dehaze_test --model dehaze_net --save dehaze_model --n_GPUs 1 --batch_size 20 --patch_size 512 --n_feats 8 --print_model --save_models --save_results --epochs 50 --lr_decay 10
+
+### test
+CUDA_VISIBLE_DEVICES=0 python -u main.py --dir_data /data/liuyang/2019-dehaze/dataset/dataset-synthetic_v4 --data_test dehaze_test --model dehaze_net --save dehaze_model_test_synthetic_v4 --n_GPUs 1 --batch_size 1 --n_feats 8 --print_model --save_models --save_results --test_only --pre_train ../experiment/dehaze_model/model/model_50.pt
+CUDA_VISIBLE_DEVICES=0 python -u main.py --dir_data /data/liuyang/2019-dehaze/dataset/dataset-sots --data_test dehaze_test --model dehaze_net --save dehaze_model_test_sots --n_GPUs 1 --batch_size 1 --n_feats 8 --print_model --save_models --save_results --test_only --pre_train ../experiment/dehaze_model/model/model_50.pt
+CUDA_VISIBLE_DEVICES=0 python -u main.py --dir_data /data/liuyang/2019-dehaze/dataset/dataset-hazerd --data_test dehaze_test --model dehaze_net --save dehaze_model_test_hazerd --n_GPUs 1 --batch_size 1 --n_feats 8 --print_model --save_models --save_results --test_only --pre_train ../experiment/dehaze_model/model/model_50.pt
+CUDA_VISIBLE_DEVICES=0 python -u main.py --dir_data /data/liuyang/2019-dehaze/dataset/dehaze-night-time --data_test dehaze_test --model dehaze_net --save dehaze_model_fea8_test_night-time --n_GPUs 1 --batch_size 1 --n_feats 8 --print_model --save_models --save_results --test_only --pre_train ../experiment/dehaze_model/model/model_50.pt
